@@ -1,0 +1,4 @@
+Cookies
+=======
+
+Phonegap Cookies plugin
