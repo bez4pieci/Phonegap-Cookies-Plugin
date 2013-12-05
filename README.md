@@ -5,7 +5,7 @@ Phonegap/Cordova plugin that allows you to clear cookies of the webview. Use it 
 
 ## Why a plugin?
 
-On Phonegap `document.cookie` is empty, index.html and all other files are loaded with `file://` protocol.
+On Phonegap `document.cookie` is empty, since index.html and all other files are loaded with `file://` protocol.
 Phonegap manages cookies internally, but doesn't expose any function for clearing them.
 
 ## Installation
@@ -23,3 +23,7 @@ window.cookies.clear(function() {
 	console.log('Cookies cleared!');
 });
 ```
+
+- - -
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/bez4pieci/phonegap-cookies-plugin/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
