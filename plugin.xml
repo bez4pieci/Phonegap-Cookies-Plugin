@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         id="com.bez4pieci.cookies" version="0.0.1">
     <name>Cookies</name>
-    <description>Cordova Device Plugin</description>
+    <description>Phonegap/Cordova plugin that allows you to clear cookies of the webview. Use it for logging out the user, restart analytics session etc.</description>
     <license>MIT</license>
     <keywords>cordova,phonegap,cookies</keywords>
     
