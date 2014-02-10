@@ -14,8 +14,6 @@
         <clobbers target="cookies" />
     </js-module>
 
-
-
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
             <feature name="Cookies">
@@ -33,6 +31,6 @@
             </feature>
         </config-file>
 
-        <source-file src="src/android/Cookies.java" target-dir="com/bez4pieci/cookies" />
+        <source-file src="src/android/Cookies.java" target-dir="src/com/bez4pieci/cookies" />
     </platform>
 </plugin>
