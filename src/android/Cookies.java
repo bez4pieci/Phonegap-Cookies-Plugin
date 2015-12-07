@@ -26,19 +26,21 @@
 
 package com.bez4pieci.cookies;
 
+import android.util.Log;
+import android.webkit.CookieManager;
+
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
 import org.json.JSONArray;
 import org.json.JSONException;
 
-import android.util.Log;
-import android.webkit.CookieManager;
+import java.lang.reflect.Method;
 
 public class Cookies extends CordovaPlugin {
-	
-	private final String TAG = "CookiesPlugin";
-	
-	@Override
+
+    private final String TAG = "CookiesPlugin";
+
+    @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if ("clear".equals(action)) {
             this.clear();
@@ -47,11 +49,10 @@ public class Cookies extends CordovaPlugin {
         }
         return false;  // Returning false results in a "MethodNotFound" error.
     }
-	
-	public void clear() {
-		Log.v(TAG, "Clearing cookies...");
-        CookieManager.getInstance().removeAllCookie();
+
+    public void clear() {
+        Log.v(TAG, "Clearing cookies...");
+        webView.getCookieManager().clearCookies();
     }
-	
 
 }
