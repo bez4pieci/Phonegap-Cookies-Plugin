@@ -22,6 +22,9 @@ $ phonegap local plugin add https://github.com/bez4pieci/Phonegap-Cookies-Plugin
 window.cookies.clear(function() {
 	console.log('Cookies cleared!');
 });
+window.cookies.clearSession(function() {
+	console.log('Session cleared!');
+});
 ```
 
 - - -
