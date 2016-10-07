@@ -1,13 +1,29 @@
 {
-    "version": "0.0.1",
-    "name": "com.bez4pieci.cookies",
-    "cordova_name": "Cookies",
-    "description": "Cordova Cookies Plugin",
-    "license": "Apache 2.0",
-    "keywords": [
-        "cordova",
-        "phonegap",
-        "cookies"
-    ],
-    "engines": []
+  "version": "0.0.2",
+  "name": "com.bez4pieci.cookies",
+  "cordova_name": "Cookies",
+  "description": "Cordova Cookies Plugin",
+  "license": "Apache 2.0",
+  "keywords": [
+    "cordova",
+    "phonegap",
+    "cookies"
+  ],
+  "engines": [],
+  "cordova": {
+    "id": "com.bez4pieci.cookies",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bez4pieci/Phonegap-Cookies-Plugin.git"
+  },
+  "author": "Ernests Karlsons",
+  "bugs": {
+    "url": "https://github.com/bez4pieci/Phonegap-Cookies-Plugin/issues"
+  },
+  "homepage": "https://github.com/bez4pieci/Phonegap-Cookies-Plugin#readme"
 }
