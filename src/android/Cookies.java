@@ -33,6 +33,7 @@ import org.json.JSONException;
 
 import android.util.Log;
 import android.webkit.CookieManager;
+import android.os.Build;
 
 public class Cookies extends CordovaPlugin {
 	
@@ -50,6 +51,10 @@ public class Cookies extends CordovaPlugin {
 	
 	public void clear() {
 		Log.v(TAG, "Clearing cookies...");
-        CookieManager.getInstance().removeAllCookies(null);
+        if (Build.VERSION.SDK_INT >= 21) {
+            CookieManager.getInstance().removeAllCookies(null);
+        } else {
+            CookieManager.getInstance().removeAllCookie();
+        }
     }
 }
