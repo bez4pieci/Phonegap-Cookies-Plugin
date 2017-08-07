@@ -31,6 +31,7 @@ import org.apache.cordova.CordovaPlugin;
 import org.json.JSONArray;
 import org.json.JSONException;
 
+import android.os.Build;
 import android.util.Log;
 import android.webkit.CookieManager;
 
@@ -48,12 +49,16 @@ public class Cookies extends CordovaPlugin {
         return false;  // Returning false results in a "MethodNotFound" error.
     }
 	
-	public void clear() {
-		Log.v(TAG, "Clearing cookies...");
-        try {
+    public void clear() {
+        Log.v(TAG, "Clearing cookies...");
+        
+        // Make sure we're running on Lollipop or higher to use removeAllCookies
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             CookieManager.getInstance().removeAllCookies(null);
-        } catch(MethodNotFound e) {
-            CookieManager.getInstance().removeAllCookies();
+        }
+        else {
+            // deprecated method call only for Android versions less than Lollipop API level
+            CookieManager.getInstance().removeAllCookie();
         }
     }
 }
