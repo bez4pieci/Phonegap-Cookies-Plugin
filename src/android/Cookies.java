@@ -50,6 +50,10 @@ public class Cookies extends CordovaPlugin {
 	
 	public void clear() {
 		Log.v(TAG, "Clearing cookies...");
-        CookieManager.getInstance().removeAllCookies(null);
+        try {
+            CookieManager.getInstance().removeAllCookies(null);
+        } catch(MethodNotFound e) {
+            CookieManager.getInstance().removeAllCookies();
+        }
     }
 }
